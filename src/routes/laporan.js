@@ -71,7 +71,7 @@ router.post("/", ensureAuth, upload.single("photo"), async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const Laporans = await User.find({});
+    const Laporans = await Laporan.find({});
 
     res.send({
       success: true,
